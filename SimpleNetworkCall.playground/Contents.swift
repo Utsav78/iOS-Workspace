@@ -39,7 +39,7 @@ func fetchProfile(forUserId userId: String, completion: @escaping (Result<Profil
             completion(.failure(.serverError))
             return
         }
-        
+
         do {
             let profile = try JSONDecoder().decode(Profile.self, from: data)
             completion(.success(profile))
@@ -62,4 +62,5 @@ fetchProfile(forUserId: "1") { result in
 // Returning success/failure
 // completion(.success(posts))
 // completion(.failure(.domainError))
+
 
