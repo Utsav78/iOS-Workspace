@@ -2,7 +2,7 @@
 //  Kanye.swift
 //  JokesApp
 //
-//  Created by ebpearls on 6/17/22.
+//  Created by Utsav Budathoki on 6/17/22.
 //
 
 

@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setup()
         layout()
+        getQuoteFromApi()
         
     }
 }
@@ -31,7 +32,7 @@ extension ViewController {
         label.font = UIFont.preferredFont(forTextStyle: .body)
         label.numberOfLines = 0
         label.lineBreakMode = NSLineBreakMode.byWordWrapping
-//        label.adjustsFontSizeToFitWidth = true
+        label.adjustsFontSizeToFitWidth = true
         label.sizeToFit()
         label.textAlignment = .center
         
@@ -64,8 +65,10 @@ extension ViewController {
     }
     
     @objc func randomTapped(_ sender: UIButton) {
-        
-        
+        getQuoteFromApi()
+    }
+    
+    func getQuoteFromApi() {
         networker.getQuote { (kanye, error) -> (Void) in
             if let _ = error {
                 self.label.text = "Error"
@@ -74,11 +77,6 @@ extension ViewController {
             
             self.label.text = kanye?.quote
         }
-        
     }
-    
-    
-    
-    
 }
 
