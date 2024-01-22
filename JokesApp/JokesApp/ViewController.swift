@@ -36,16 +36,18 @@ extension ViewController {
         label.sizeToFit()
         label.textAlignment = .center
         
-
-        
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Random Quote", for: [])
+        button.frame = CGRect(x: 50, y: 50, width: 500, height: 70)
+        button.layer.cornerRadius = 12
+        button.backgroundColor = .brown
+        button.tintColor = .white
+        button.titleEdgeInsets = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
+        
         
         button.addTarget(self, action: #selector(randomTapped), for: .primaryActionTriggered)
-
-        
-        
     }
+    
     private func layout() {
         view.addSubview(label)
         view.addSubview(button)
@@ -60,8 +62,6 @@ extension ViewController {
             button.topAnchor.constraint(equalToSystemSpacingBelow: label.bottomAnchor, multiplier: 1),
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
-        
-        
     }
     
     @objc func randomTapped(_ sender: UIButton) {
