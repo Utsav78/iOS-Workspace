@@ -28,7 +28,6 @@ extension ViewController {
     private func setup() {
         
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text =  "label"
         label.font = UIFont.preferredFont(forTextStyle: .body)
         label.numberOfLines = 0
         label.lineBreakMode = NSLineBreakMode.byWordWrapping
