@@ -36,8 +36,8 @@ extension ViewController {
         label.textAlignment = .center
         
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Random Quote", for: [])
-        button.frame = CGRect(x: 50, y: 50, width: 500, height: 70)
+        button.setTitle("New Quote", for: [])
+        
         button.layer.cornerRadius = 12
         button.backgroundColor = .brown
         button.tintColor = .white
@@ -59,6 +59,8 @@ extension ViewController {
 
             
             button.topAnchor.constraint(equalToSystemSpacingBelow: label.bottomAnchor, multiplier: 1),
+            button.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 6),
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: button.trailingAnchor, multiplier: 6),
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
