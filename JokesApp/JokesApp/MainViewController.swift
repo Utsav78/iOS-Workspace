@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     let button = UIButton(type: .system)
     let label = UILabel()
     
@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         
     }
 }
-extension ViewController {
+extension MainViewController {
     
     private func setup() {
         
