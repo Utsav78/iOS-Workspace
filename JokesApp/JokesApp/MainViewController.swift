@@ -12,8 +12,6 @@ class MainViewController: UIViewController {
     let label = UILabel()
     
     let networker = Networker.shared
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +38,7 @@ extension MainViewController {
         
         button.layer.cornerRadius = 12
         button.backgroundColor = .brown
-        button.tintColor = .white
+        button.tintColor = .gray
         button.titleEdgeInsets = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
         
         
